@@ -1,0 +1,7 @@
+GeoIP-*
+objdir
+build
+Release
+x64
+.vs
+.vscode
