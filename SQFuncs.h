@@ -18,6 +18,18 @@ extern "C" {
 #endif
 	SQInteger				RegisterSquirrelFunc				(HSQUIRRELVM v, SQFUNCTION f, const SQChar* fname, unsigned char uiParams, const SQChar* szParams);
 	void					RegisterFuncs						(HSQUIRRELVM v);
+	int FirstMessageLength(unsigned char* message);
+	int countMessage(unsigned char* rmsg, int len);
+	void SendPacket(int actorid, unsigned char* packet, int plen);
+	void BuyActor(int aid);
+	bool IsActorAvailable(int actorid);
+	void FreeActor(int aid);
+	void CreateActorForPlay(int skinId, char* fname,int playerid);
+	bool DisconnectActor(char* name, int len);
+	bool IsActorDisconnected(int aid);
+	int IsPlayerActor(int32_t playerid);
+	int GetActorID(int32_t playerid);
+	int GetActorSkin(int aid);
 #ifdef __cplusplus
 }
 #endif
